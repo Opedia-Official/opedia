@@ -1,0 +1,147 @@
+
+.header{
+    border-bottom: 1px solid #E2E8F0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color:#D00A2B; 
+}
+
+.navmenu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navitem {
+    margin-left: 3rem
+}
+
+.navlink{
+    font-size: 18px;
+    font-weight: 700;
+    color: #0A2C3D;
+    text-decoration: none;
+    transition: .3s;
+    position: relative;
+}
+
+
+.navlink:hover{
+    color: #D00A2B;
+}
+
+.navlogo {
+    font-size: 2.1rem;
+}
+
+@media only screen and (max-width: 1023px) {
+    .isSearchClicked { 
+        margin-left: 0px;
+    }
+    
+    .navmenu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+            padding-top: 20px;
+            padding-bottom: 50px;
+        z-index: 999;
+    }
+
+    .navmenu.active {
+        left: 0;
+    }
+
+
+    
+    .navitem {
+        margin: 1rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 999;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
+
+.footer {
+    font-size: 1.5rem;
+}
+
+#isActive{
+    color: #D00A2B !important;
+    font-size: 18px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: .3s;
+    position: relative;
+}
+
+
+#isActive:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -5px;
+    height: 2px;
+    width: 80%;
+    background-color:#D00A2B; ;
+  }
+
+  @media (max-width: 1200px) { 
+    .navitem {
+        margin-left: 2rem
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
